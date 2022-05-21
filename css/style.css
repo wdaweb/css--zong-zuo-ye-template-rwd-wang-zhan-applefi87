@@ -22,21 +22,37 @@ button {
   cursor: pointer;
 }
 
-
-
 /*  */
 #top {
   width: 100%;
   height: 56px;
   background: #2a2a2a;
   display: flex;
-  position:fixed;
+  position: fixed;
   align-items: center;
+}
+
+.hide {
+  display: none;
 }
 
 #top button {
   width: 46px;
   height: 46px;
+}
+
+#top label {
+  width: 46px;
+  text-align: center;
+}
+
+#nav:checked~#nav-bar {
+  transform: translateX(-100%);
+}
+
+#user:checked~.more {
+  transform: rotateX(90deg);
+  opacity: 0;
 }
 
 i {
@@ -57,7 +73,7 @@ i {
   font-weight: 500;
 }
 
-#top .user i {
+#top .more i {
   font-size: 25px;
 }
 
@@ -72,7 +88,8 @@ i {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  transition: height 1s;
+  transform-origin: top;
+  transition: all .4s;
 }
 
 #top select {
@@ -106,7 +123,7 @@ i {
 
 /* ----------左方選單區-------------- */
 #nav-bar {
-  position:fixed;
+  position: fixed;
   width: 300px;
   height: 100vh;
   overflow-y: auto;
@@ -116,10 +133,11 @@ i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right:4px solid rgb(167, 255, 52);
+  border-right: 4px solid rgb(167, 255, 52);
   transition: 0.3s;
 }
-#nav-bar::-webkit-scrollbar{
+
+#nav-bar::-webkit-scrollbar {
   width: 0;
 }
 
@@ -166,6 +184,7 @@ i {
   line-height: 52px;
   margin-bottom: 5px;
 }
+
 #menu-down button {
   width: 100%;
   height: 100%;
@@ -174,36 +193,44 @@ i {
   font-size: 15px;
   color: #ccc;
 }
-#menu-down>div:first-child button{
+
+#menu-down>div:first-child button {
   background: rgb(100, 176, 0);
   color: #fff;
 }
-#menu-down>div:hover button{
+
+#menu-down>div:hover button {
   background: rgb(100, 176, 0);
   color: #fff;
   transition: all 0.15s ease-in-out;
 }
-#menu-down .pages{
-  display:flex;
+
+#menu-down .pages {
+  display: flex;
   justify-content: space-between;
 }
-#menu-down .down{
-  width:auto;
+
+#menu-down .down {
+  width: auto;
 }
-#menu-down .down i{
+
+#menu-down .down i {
   font-size: 10px;
 }
-#menu-down .share{
-  display:flex;
+
+#menu-down .share {
+  display: flex;
   padding: 0 20px 0 5px;
   height: 120px;
 }
-#menu-down .share div{
+
+#menu-down .share div {
   margin: 0 10px;
 }
+
 #menu-down .share i {
   font-size: 15px;
-  color:#eee;
+  color: #eee;
 }
 
 #menu-down {}

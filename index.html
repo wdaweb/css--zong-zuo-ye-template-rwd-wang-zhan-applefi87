@@ -13,10 +13,9 @@
 <body>
   <div id="main">
     <div id="top">
-      <button id="nav-bar-btn">
-       <input type="checkbox" name="ck">
-      <i class="fa-solid fa-bars"></i>
-      </button>
+      <label id="nav-bar-btn" for="nav">
+        <i class="fa-solid fa-bars"></i>
+      </label>
       <table class="info">
         <tr>
           <td><a href="">HELP</a></td>
@@ -24,19 +23,21 @@
           <td><a href="">CONTACTS</a></td>
         </tr>
       </table>
-      <div class="user">
-        <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
-        <div class="more">
-          <div><select name="language" id="language">
-              <option value="EN">EN</option>
-              <option value="FR">FR</option>
-              <option value="ES">ES</option>
-            </select></div>
-          <div class="reg"><button>REGESTRATION</button></div>
-          <div><a href=""><i class="fa-solid fa-right-to-bracket login"></i></a></div>
-        </div>
+      <!-- 放這因為無法往上選取 -->
+      <input type="checkbox" id="user" class="hide">
+      <label id="user-btn" for="user"><i class="fa-solid fa-ellipsis-vertical"></i></label>
+      <div class="more">
+        <div><select name="language" id="language">
+            <option value="EN">EN</option>
+            <option value="FR">FR</option>
+            <option value="ES">ES</option>
+          </select></div>
+        <div class="reg"><button>REGESTRATION</button></div>
+        <div><a href=""><i class="fa-solid fa-right-to-bracket login"></i></a></div>
       </div>
     </div>
+    <!-- 放這因為無法往上選取 -->
+    <input type="checkbox" id="nav" class="hide">
     <div id="nav-bar">
       <div id="menu-up">
         <a href=""><img src="https://livedemo00.template-help.com/wt_prod-19186/images/logo-inverse-213x82.png"></a>
