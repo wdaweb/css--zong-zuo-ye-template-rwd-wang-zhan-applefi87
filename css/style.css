@@ -22,6 +22,11 @@ button {
   cursor: pointer;
 }
 
+#main {
+  display: flex;
+  flex-direction: column;
+}
+
 /*  */
 #top {
   width: 100%;
@@ -233,6 +238,144 @@ i {
   color: #eee;
 }
 
-#menu-down {}
+/* ------------------------------carousel--------------------------- */
+#carousel {
+  margin-top: 56px;
+  position: relative;
+  overflow: hidden;
+}
 
-#menu-down {}
+.carousel-items {
+  height: 331px;
+}
+
+.carousel-item {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#carousel .c1 {
+  background: url('https://livedemo00.template-help.com/wt_prod-19186/images/slider-1-slide-1-1920x671.jpg') no-repeat left center/ cover;
+}
+
+#carousel .c2 {
+  opacity: 0;
+  transition: opacity 1s;
+  background: url('https://livedemo00.template-help.com/wt_prod-19186/images/slider-1-slide-2-1920x671.jpg') no-repeat left center/ cover;
+}
+
+.carousel-caption {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#carousel h1 {
+  margin-top: 0;
+}
+
+#carousel h3 {
+  margin: 0 0 40px 0;
+  font-weight: 500;
+}
+
+.carousel-item button {
+  border: 2px solid white;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#carousel .sidebutton {
+  position: absolute;
+}
+
+#carousel .sidebutton>label {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+}
+
+#carousel .indicator {
+  position: absolute;
+  width: 100%;
+  bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+#carousel .indicator>label {
+  width: 10px;
+  height: 10px;
+  margin: 0 15px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+}
+
+#carousel .indicator>label:hover {
+  background: #64b000;
+  transition: all 0.3s;
+}
+
+#carousel .indicator>label::after {
+  position: absolute;
+  transition: 0.3s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 27px;
+  height: 27px;
+  /* 待轉移 */
+  border-radius: 50%;
+
+}
+
+#indicator-one:checked~.indicator>.one {
+  background: #64b000;
+}
+
+#indicator-two:checked~.indicator>.two {
+  background: #64b000;
+}
+
+#indicator-two:checked~.carousel-items .c2 {
+  opacity: 1;
+}
+
+#indicator-one:checked~.indicator>.one::after {
+  border: 1px white solid;
+}
+
+#indicator-two:checked~.indicator>.two::after {
+  border: 1px white solid;
+}
+
+/* 
+.carousel-caption>* {
+  text-align: left;
+}
+
+.carousel>button {
+  opacity: 1;
+  height: 50px;
+  top: 50%;
+  background-color: #64b000;
+}
+
+.carousel-control-prev {
+  transform: translate(-20%, -50%) skew(20deg, 0);
+}
+
+.carousel-control-next {
+  transform: skew();
+} */
