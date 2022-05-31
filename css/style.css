@@ -4,6 +4,7 @@ body {
 }
 
 * {
+  letter-spacing: 0.05em;
   box-sizing: border-box;
   font-family: "Kanit", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -25,6 +26,7 @@ button {
 #main {
   display: flex;
   flex-direction: column;
+  background: #edeff4;
 }
 
 /*  */
@@ -94,7 +96,7 @@ i {
   align-items: center;
   justify-content: flex-end;
   transform-origin: top;
-  transition: all .4s;
+  transition: opacity .4s;
 }
 
 #top select {
@@ -139,7 +141,7 @@ i {
   flex-direction: column;
   align-items: center;
   border-right: 4px solid rgb(167, 255, 52);
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
 
 #nav-bar::-webkit-scrollbar {
@@ -251,11 +253,22 @@ i {
 
 .carousel-item {
   position: absolute;
+  display: flex;
+  align-items: center;
   height: 100%;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 #carousel .c1 {
@@ -264,14 +277,17 @@ i {
 
 #carousel .c2 {
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 1.5s;
   background: url('https://livedemo00.template-help.com/wt_prod-19186/images/slider-1-slide-2-1920x671.jpg') no-repeat left center/ cover;
 }
 
+#carousel .c2 .carousel-caption {
+  opacity: 0;
+}
+
 .carousel-caption {
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
+  position: relative;
+  padding: 0 0 50px 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -282,7 +298,7 @@ i {
 }
 
 #carousel h3 {
-  margin: 0 0 40px 0;
+  margin: 0 0 30px 0;
   font-weight: 500;
 }
 
@@ -352,6 +368,11 @@ i {
   opacity: 1;
 }
 
+#indicator-two:checked~.carousel-items .c2 .carousel-caption {
+  opacity: 1;
+  transition: opacity 3s ease-in;
+}
+
 #indicator-one:checked~.indicator>.one::after {
   border: 1px white solid;
 }
@@ -359,23 +380,3 @@ i {
 #indicator-two:checked~.indicator>.two::after {
   border: 1px white solid;
 }
-
-/* 
-.carousel-caption>* {
-  text-align: left;
-}
-
-.carousel>button {
-  opacity: 1;
-  height: 50px;
-  top: 50%;
-  background-color: #64b000;
-}
-
-.carousel-control-prev {
-  transform: translate(-20%, -50%) skew(20deg, 0);
-}
-
-.carousel-control-next {
-  transform: skew();
-} */
