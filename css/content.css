@@ -6,8 +6,8 @@
     align-items: center;
 }
 
-#content .container {
-    width: 90%;
+.container {
+    width: 95%;
 }
 
 #select-btn {
@@ -17,7 +17,7 @@
     padding: 16px 40px;
     font-size: 12px;
     font-weight: 800;
-    border-radius: 5px;
+    border-radius: 3px;
     align-self: flex-start;
     color: white;
     transition: background 0.3s;
@@ -33,6 +33,7 @@
 
 #showSelect:checked~#select-list {
     opacity: 1;
+    pointer-events: auto;
     transition: opacity 0.3s;
 }
 
@@ -42,8 +43,9 @@
 
 #select-list {
     opacity: 0;
+    pointer-events: none;
     position: relative;
-  
+
 }
 
 #select-ul {
@@ -68,4 +70,209 @@
     font-weight: 700;
     color: #9b9b9b;
     margin: 10px 5px 10px 0;
+}
+
+/* ******************** */
+#indicator * {
+    color: black;
+    font-weight: 600;
+}
+
+#all {
+    width: 100%;
+    background: #2a2a2a;
+    padding: 18px 25px;
+}
+
+#all span {
+    color: white;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+#indicator .block {
+    margin-top: 30px;
+}
+
+#indicator .top_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 25px;
+}
+
+#indicator .top_title::after {
+    content: "";
+    width: 4px;
+    height: 20px;
+    background: #64b000;
+    position: absolute;
+    left: 0;
+}
+
+#indicator .left_title {
+    /* display: inline-block; */
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+#indicator .left_title span {
+    font-weight: 700;
+}
+
+#indicator .top_title button {
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 8px;
+    font-weight: 700;
+    border: 1px solid #ddd;
+}
+
+#indicator .top_title button:nth-child(2) {
+    background-color: #ff4f2e;
+    color: white;
+}
+
+#indicator .block .title {
+    background: #616161;
+    padding: 12px 25px;
+}
+
+#indicator .block .title span {
+    color: white;
+    font-size: 14px;
+}
+
+/*  */
+.card {
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.card .icon {
+    width: 25px;
+    height: 30px;
+    background: url('https://livedemo00.template-help.com/wt_prod-19186/images/sprite/icons.png') 137px 0px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+li {
+    text-align: center;
+    margin: 15px 20px 0 20px;
+}
+
+.icon {
+    margin: 0 auto;
+}
+
+i {
+    font-size: 14px;
+    color: #777;
+}
+
+#indicator #type .info>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#indicator #type .score {
+    margin-right: 10px;
+    color: #64b000
+}
+
+/*  */
+
+.card h6 {
+    margin: 0;
+}
+
+.player {
+    padding: 5px;
+    border-radius: 5px;
+    background: #eaecee;
+}
+
+.player h6 {
+    color: #151515;
+}
+
+/* ************************************* */
+
+#play {
+    padding: 50px 40px ;
+}
+
+#play .pic img {
+    width: 100%;
+}
+
+#play .card {
+    display: flex;
+    flex-direction: column;
+   margin-bottom: 30px;
+}
+
+#play .info {
+    padding: 15px 20px 25px;
+
+}
+
+#play .detail {
+    display: flex;
+    flex-direction: column;
+}
+
+#play .title {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#play .date {
+    padding: 10px 0;
+}
+
+#play .date {
+    color: #9b9b9b;
+    font-size: 10px;
+
+}
+
+#play .date i {
+    color: #9b9b9b;
+    margin-right: 10px;
+}
+
+#play .scores {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 5px;
+}
+
+#play .score {
+    background: #eaecee;
+    width: 31%;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+#play .score .num{
+    color:#151515;
+    font-weight: normal;
+    font-size: 10px;
+}
+#play .score .detail{
+    font-size: 10px;
+    font-weight:700;
 }

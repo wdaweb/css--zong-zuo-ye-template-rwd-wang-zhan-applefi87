@@ -8,7 +8,11 @@ body {
   box-sizing: border-box;
   font-family: "Kanit", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
-
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 a {
   font-weight: 1rem;
   color: white;
@@ -36,6 +40,7 @@ button {
   background: #2a2a2a;
   display: flex;
   position: fixed;
+  z-index: 10;
   align-items: center;
 }
 
@@ -60,6 +65,7 @@ button {
 #user:checked~.more {
   transform: rotateX(90deg);
   opacity: 0;
+  pointer-events: none;
 }
 
 i {
@@ -277,12 +283,14 @@ i {
 
 #carousel .c2 {
   opacity: 0;
+  pointer-events: none;
   transition: opacity 1.5s;
   background: url('https://livedemo00.template-help.com/wt_prod-19186/images/slider-1-slide-2-1920x671.jpg') no-repeat left center/ cover;
 }
 
 #carousel .c2 .carousel-caption {
   opacity: 0;
+  pointer-events: none;
 }
 
 .carousel-caption {
@@ -366,10 +374,12 @@ i {
 
 #indicator-two:checked~.carousel-items .c2 {
   opacity: 1;
+  pointer-events: auto;
 }
 
 #indicator-two:checked~.carousel-items .c2 .carousel-caption {
   opacity: 1;
+  pointer-events: auto;
   transition: opacity 3s ease-in;
 }
 
