@@ -1,0 +1,262 @@
+/* ************************** */
+/* delete */
+/* #top,
+#nav-bar,
+#carousel,
+#content {
+    display: none;
+} */
+
+.hover-green,
+.hover-green>* {
+    transition: color, 0.2s !important;
+}
+
+.hover-green:hover,
+.hover-green:hover>* {
+    color: #64b000!important;
+    transition: color, 0.2s!important;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#footer {
+    background: #333;
+}
+
+#footer .content {
+    width: 100%;
+    color: #666;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+#footer .content>h5 {
+    color: white;
+    align-self: flex-start;
+}
+
+#footer .input {
+    align-items: center;
+    justify-content: stretch;
+    border-bottom: 1px #666 solid;
+    width: 100%;
+    background: #2a2a2a;
+    border-radius: 3px;
+}
+
+#footer .content input {
+    flex-grow: 1;
+    font-weight: 700;
+    background:#2a2a2a;
+    font-size: 15px;
+    line-height: 48px;
+    color: #666;
+    height: 48px;
+    border: none;
+}
+
+#footer .input i {
+    margin-right: 15px;
+    color: #64b000;
+    font-size: 20px;
+}
+
+#footer .block {
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer .block img.logo {
+    display: block;
+    width: 110px;
+    margin: 40px auto;
+}
+
+#footer .block>p {
+    width: 300px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+#footer .logos {
+    margin: 10px 0;
+    width: 95%;
+    justify-content: space-between;
+}
+
+#footer .logo a {
+    background: #555;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 3px;
+    transition: all,0.3s;
+}
+#footer .logo a:hover {
+    background:#64b000;
+    transition: all,0.3s;
+}
+#footer .logos button {
+    width: 140px;
+    height: 42px;
+    border: 2px white solid;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: all,1s;
+}
+#footer .logos button:hover {
+    background: #64b000;
+    border: none;
+transition: all,1s;
+}
+/* ******* */
+#footer .newsBlock {
+    width: 100%;
+}
+
+#footer .block h3 {
+    color: white;
+}
+
+#footer .block hr {
+    width: 44px;
+    height: 3px;
+    background: #64b000;
+    border: none;
+    margin: 0 auto 20px 0;
+}
+
+/* --- */
+#footer .links {
+    fill: #64b000;
+    justify-content: center;
+    width: 100%;
+}
+
+#footer .link {
+    align-items: center;
+    margin: 10px;
+}
+
+#footer .link div>* {
+    margin: 0 0 0 10px;
+    text-align: start;
+}
+
+#footer .link div>a {
+    color: white;
+    font-size: 14px;
+}
+
+/* ----------- */
+#footer .news {
+    margin-bottom: 25px;
+}
+
+#footer .news img,#footer .news .frame {
+    width: 80px;
+    height: 75px;
+    overflow: hidden;
+    transition: transform 0.1s;
+}
+#footer .news img:hover{
+    transform: scale(1.03);
+    transition: transform 0.3s;
+}
+
+#footer .info {
+    width: calc(100% - 90px);
+    padding: 0 5px 0 10px;
+}
+
+#footer .info h6 {
+    background: #ffd03a;
+    border-radius: 5px;
+    padding: 2px 8px;
+    margin: 0;
+    color: black;
+    width: fit-content;
+}
+
+#footer .info p {
+    margin: 5px 0 10px 0;
+    font-size: 8px;
+    color: white;
+    font-weight: 600;
+}
+
+#footer .info .date,
+#footer .info .date i {
+    font-size: 8px;
+    color: #aaa;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+/* *************** */
+#footer .end {
+    background: #222;
+}
+
+#footer .company {
+    width: 100%;
+    color: #555;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#footer .company a {
+    color: #555;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+#footer .company a:hover {
+    color: #64b000;
+    transition: color, 0.2s;
+}
+
+#footer ul {
+    width: 100%;
+    text-align: center;
+    border: none;
+    padding: 0 30px 20px;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+#footer li {
+    margin: 0;
+}
+
+#footer li a {
+    color: #888;
+    font-size: 8px;
+    font-weight: 700;
+    transition: color, 0.2s;
+}
+
+#footer li:first-child a {
+    color: #64b000;
+}
+
+#footer li:hover a {
+    color: #64b000;
+}

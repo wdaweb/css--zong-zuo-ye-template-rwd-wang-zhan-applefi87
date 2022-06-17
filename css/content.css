@@ -210,7 +210,7 @@ i {
 /* ************************************* */
 
 #play {
-    padding: 50px 40px ;
+    padding: 50px 40px;
 }
 
 #play .pic img {
@@ -220,7 +220,7 @@ i {
 #play .card {
     display: flex;
     flex-direction: column;
-   margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 #play .info {
@@ -267,12 +267,14 @@ i {
     display: flex;
     justify-content: space-between;
 }
-#play .score .num{
-    color:#151515;
+
+#play .score .num {
+    color: #151515;
     font-weight: normal;
     font-size: 10px;
 }
-#play .score .detail{
+
+#play .score .detail {
     font-size: 10px;
-    font-weight:700;
+    font-weight: 700;
 }
