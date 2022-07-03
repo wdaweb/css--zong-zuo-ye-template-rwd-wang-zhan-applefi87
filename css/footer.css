@@ -317,7 +317,43 @@
 }
 
 @media (min-width:768px) {
-    
+    #footer .content .input {
+        background: #333;
+        height: 56px;
+    }
+
+    #footer .content .input>* {
+        background: #333;
+        height: 100%;
+        font-size: 30px;
+    }
+
+    #footer .content .input>a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        border: 2px solid #64b000;
+        width: 120px;
+        height: 70%;
+    }
+
+    #footer .end {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+    #footer .end .company {
+        width: 40%;
+        text-align: left;
+padding-left: 50px;
+    }
+    #footer .end ul {
+        width: 60%;
+        padding:0;
+        align-items: center;
+    }
+
 }
 
 @media (min-width:1200px) {}

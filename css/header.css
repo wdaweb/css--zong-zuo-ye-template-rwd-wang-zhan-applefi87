@@ -412,6 +412,9 @@ i {
     height: 417px;
   }
   /* 差側邊按鈕 */
+  #carousel .indicator{
+    display:none;
+  }
 }
 
 

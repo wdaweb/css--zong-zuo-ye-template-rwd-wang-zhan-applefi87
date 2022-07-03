@@ -88,9 +88,6 @@
     background-image: url(https://livedemo00.template-help.com/wt_prod-19186/images/sprite/icons.png);
 }
 
-/* #select-ul li:nth-child(1) .img{
-    background-position: 26px 0;
-} */
 
 #select-ul p {
     font-size: 12px;
@@ -250,17 +247,18 @@ i {
 #play .pic {
     height: 180px;
     overflow: hidden;
+    background: #900;
 }
 
 #play .pic img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transform: scale(1.05);
-    transform-origin: center;
     transition: transform 0.5s ease-in-out;
 }
 
 #play .pic img:hover {
-    object-fit: cover;
     transform: none;
     transition: transform 0.5s ease-in-out;
 }
@@ -403,9 +401,9 @@ i {
     }
 
     .card li {
-        padding:4px 0 2px;
+        padding: 4px 0 2px;
         width: 120px;
-        margin: 15px  0 0 0;
+        margin: 15px 0 0 0;
     }
 
     .card li:nth-child(1) {
@@ -421,11 +419,68 @@ i {
     .card li:nth-child(6) {
         line-height: 43px;
     }
-    
-#play .detail {
-    flex-direction: row;
-    justify-content: space-between;
+
+    #play .detail {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
+
+@media (min-width:768px) {
+    .container {
+        width: 690px;
+    }
+
+
+
+
+    
+    /*  */
+    #type .card{
+        padding: 7px 0;
+    }
+    #type .card ul {
+        padding: 0;
+        align-items: center;
+    }
+
+    #type .card li {
+        width: 100px;
+        margin: 0;
+    }
+    #type .card li:nth-child(1) {
+        width: 60px;
+    }
+    #type .card li:nth-child(2) {
+        width: 180px;
+        margin-right: 20px;
+        padding: 0;
+        border-right: 1px solid #ccc;
+        /* height:32px; */
+    }
+    #type .info *{
+     font-size: 12px;
+    }
+
+    /*  */
+    #play {
+        display: flex;
+        padding: 50px 0px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #play .card {
+        width: 48%;
+    }
+
+
+
+    #play .card .info span {
+        font-size: 10px;
+
+    }
 }
 
 @media (min-width:1200px) {}
