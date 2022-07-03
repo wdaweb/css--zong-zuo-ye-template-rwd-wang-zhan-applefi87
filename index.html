@@ -65,8 +65,8 @@
       </div>
     </div>
     <div id="carousel">
-      <input type="radio" name="indicator" id="indicator-one" class="hide" checked>
-      <input type="radio" name="indicator" id="indicator-two" class="hide">
+      <input type="radio" name="indicator" id="indicator-one" class="hide" value='1' checked>
+      <input type="radio" name="indicator" id="indicator-two" class="hide" value='2'>
       <div class="carousel-items">
         <div class="carousel-item c1">
           <div class="carousel-caption">
@@ -85,8 +85,8 @@
       </div>
 
       <div class="sidebutton btn">
-        <label class="prev" for="sidebutton-prev"></label>
-        <label class="next" for="sidebutton-next"></label>
+        <button class="prev" for="sidebutton-prev"><i class="fa-solid fa-angle-left"></i></button>
+        <button class="next" for="sidebutton-next"><i class="fa-solid fa-angle-right"></i></button>
       </div>
       <div class="indicator btn">
         <label class="one" for="indicator-one"></label>
@@ -641,9 +641,23 @@
     integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=='
     crossorigin='anonymous'></script>
   <script>
+    const pageBtn = $('.sidebutton>button')
+    console.log(pageBtn);
+    pageBtn.click(() => {
+      const nowPage = $('input[name=indicator]:checked').val()
+
+      if (nowPage == '1') {
+        $("input[name=indicator][value='2']").prop('checked',true)
+      } else {
+        $("input[name=indicator][value='1']").prop('checked',true)
+      }
+      console.log(nowPage);
+    })
+
+
+    // 創建小插圖(他的圖案尺寸不統一 跑位細節不管了)
     for (let i = 0; i < 10; i++) {
       const pic = $(`#select-ul li:nth-child(${i}) .img`)
-      console.log(pic);
       pic.css("background-position", `-${i * 28}px 0`)
     }
   </script>
