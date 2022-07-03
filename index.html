@@ -124,6 +124,7 @@
               <p>ICE HOCKEY</p>
               <p>3</p>
             </li>
+            <li id="middleLine"></li>
             <li>
               <span class="img"></span>
               <p>VOLLEYBALL</p>
@@ -639,16 +640,11 @@
     integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=='
     crossorigin='anonymous'></script>
   <script>
-    // const nb_btn = $('#nav-bar-btn')
-    // const nb = $('#nav-bar')
-    // const nb_display = 0
-    // nb_btn.click(function () {
-    //   if(nb_display==0){
-    //     nb.css('transform','translateX(-100%)')
-    //   }else{
-    //     nb.css('transform','none')
-    //   }
-    // })
+    for (let i = 0; i < 10; i++) {
+      const pic = $(`#select-ul li:nth-child(${i}) .img`)
+      console.log(pic);
+      pic.css("background-position", `-${i * 28}px 0`)
+    }
   </script>
 </body>
 
