@@ -1,3 +1,10 @@
+@media (min-width:768px){
+
+}
+@media (min-width:1200px){
+
+}
+
 #content {
     margin-top: 50px;
     width: 100%;
@@ -191,8 +198,6 @@ i {
     color: #64b000
 }
 
-/*  */
-
 .card h6 {
     margin: 0;
 }
@@ -201,6 +206,14 @@ i {
     padding: 5px;
     border-radius: 5px;
     background: #eaecee;
+    transition: all 0.2s;
+}
+.player:hover {
+    background: #64b000;
+}
+
+#indicator .player:hover > * {
+    color: white
 }
 
 .player h6 {
@@ -212,10 +225,21 @@ i {
 #play {
     padding: 50px 40px;
 }
-
+#play .pic {
+    height:180px;
+    overflow: hidden;
+}
 #play .pic img {
     width: 100%;
+transform: scale(1.05);
+transform-origin: center;
+transition: transform 0.5s ease-in-out;
 }
+#play .pic img:hover {
+    object-fit: cover;
+    transform: none;
+    transition: transform 0.5s ease-in-out;
+    }
 
 #play .card {
     display: flex;
@@ -266,7 +290,14 @@ i {
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
+    transition: all 0.2s;
 }
+#play .score:hover {
+background:#64b000;
+}
+#play .scores .score:hover >*{
+   color:white
+    }
 
 #play .score .num {
     color: #151515;
