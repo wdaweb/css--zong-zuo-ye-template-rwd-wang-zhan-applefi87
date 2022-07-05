@@ -356,4 +356,17 @@ padding-left: 50px;
 
 }
 
-@media (min-width:1200px) {}
+@media (min-width:1200px) {
+    #footer .content{
+        margin: auto;
+        width: 1200px;
+        flex-direction: row;
+        padding: 50px 0;
+    }
+   #footer .block{
+    width: 520px;
+   }
+   #footer .newsBlock{
+    width: 650px;
+   }
+}

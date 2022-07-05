@@ -74,6 +74,7 @@ button {
   transform: rotateX(90deg);
   opacity: 0;
   pointer-events: none;
+  transition: all .5s;
 }
 
 i {
@@ -110,7 +111,7 @@ i {
   align-items: center;
   justify-content: flex-end;
   transform-origin: top;
-  transition: opacity .4s;
+  transition: all .5s;
 }
 
 #top select {
@@ -473,6 +474,12 @@ i {
     height: 417px;
   }
 
+  /*  */
+
+  .carousel-item::before {
+    background-color: transparent;
+  }
+
   /* 差側邊按鈕 */
   #carousel .indicator {
     display: none;
@@ -509,6 +516,7 @@ i {
   }
 
   #nav-bar {
+    transition: none;
     height: auto;
     display: block;
     position: relative;
@@ -524,11 +532,13 @@ i {
   #top .more {
     margin-left: 545px;
     position: initial;
-    width: 400px;
+    width: 500px;
     background: transparent;
+    transition:none;
   }
 
   #user:checked~.more {
+    transition:none;
     transform: none;
     opacity: 1;
     pointer-events: initial;
@@ -547,12 +557,13 @@ i {
   }
 
   #menu-up img {
-    width: 25%;
-    margin-right: 300px;
+    width: 20%;
+    margin-right: 350px;
   }
 
   #search {
-    margin-left: 450px;
+    margin-left: 250px;
+    width: 350px;
   }
 
 
@@ -570,6 +581,10 @@ i {
     height: 100%;
     margin-bottom: 0;
     margin-right: 10px;
+  }
+
+  #menu-down>div button {
+    font-size: 13px;
   }
 
   #menu-down>div:first-child button {
@@ -590,5 +605,10 @@ i {
 
   #menu-down .share>div {
     line-height: 68px;
+  }
+
+  /*  */
+  #carousel {
+    margin-top: 0;
   }
 }

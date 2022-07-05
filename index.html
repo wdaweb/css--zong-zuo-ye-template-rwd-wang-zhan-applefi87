@@ -556,6 +556,7 @@
     integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=='
     crossorigin='anonymous'></script>
   <script>
+// 
     const pageBtn = $('.sidebutton>button')
     console.log(pageBtn);
     pageBtn.click(() => {
@@ -568,6 +569,17 @@
       }
       console.log(nowPage);
     })
+    // 創建輪播畫面
+    setInterval(() => {
+      const nowPage = $('input[name=indicator]:checked').val()
+      if (nowPage == '1') {
+        $("input[name=indicator][value='2']").prop('checked', true)
+      } else {
+        $("input[name=indicator][value='1']").prop('checked', true)
+      }
+    }, 6000);
+    // 
+
 
 
     // 創建小插圖(他的圖案尺寸不統一 跑位細節不管了)
@@ -575,6 +587,8 @@
       const pic = $(`#select-ul li:nth-child(${i}) .img`)
       pic.css("background-position", `-${i * 28}px 0`)
     }
+
+
   </script>
 </body>
 

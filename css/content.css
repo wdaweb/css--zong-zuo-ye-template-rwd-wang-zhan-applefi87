@@ -45,7 +45,6 @@
     opacity: 0;
     pointer-events: none;
     position: relative;
-
 }
 
 #select-ul {
@@ -350,6 +349,7 @@ i {
         display: block;
         width: 100%;
         height: 281px;
+        pointer-events: initial;
     }
 
     #select-ul {
@@ -361,13 +361,6 @@ i {
         background: transparent;
     }
 
-    #content #middleLine {
-        margin: 30px 0;
-        width: 100%;
-        height: 1px;
-        background: rgb(105, 105, 105);
-    }
-
     #select-ul>li {
         border-left: 1px solid rgb(114, 114, 114);
         box-sizing: content-box;
@@ -377,6 +370,12 @@ i {
         padding: 25 10;
         background: transparent;
         flex-direction: column;
+    }
+    li#middleLine {
+        margin: 30px 0;
+        width: 100%;
+        height: 1px;
+        background: rgb(105, 105, 105);
     }
 
     #select-ul>li:nth-child(1),
@@ -432,13 +431,11 @@ i {
     }
 
 
-
-
-    
     /*  */
-    #type .card{
+    #type .card {
         padding: 7px 0;
     }
+
     #type .card ul {
         padding: 0;
         align-items: center;
@@ -448,9 +445,11 @@ i {
         width: 100px;
         margin: 0;
     }
+
     #type .card li:nth-child(1) {
         width: 60px;
     }
+
     #type .card li:nth-child(2) {
         width: 180px;
         margin-right: 20px;
@@ -458,8 +457,9 @@ i {
         border-right: 1px solid #ccc;
         /* height:32px; */
     }
-    #type .info *{
-     font-size: 12px;
+
+    #type .info * {
+        font-size: 12px;
     }
 
     /*  */
@@ -483,4 +483,57 @@ i {
     }
 }
 
-@media (min-width:1200px) {}
+@media (min-width:1200px) {
+    .container {
+        width: 1200px;
+    }
+
+    /*  */
+    #select-list {
+        height: 80px;
+        margin: 30px 0 5px;
+    }
+
+    #select-ul {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    #select-ul li {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    /*  */
+
+    li#middleLine {
+        display: none;
+    }
+
+    #select-ul>li:nth-child(7) {
+        border-left: 1px solid rgb(67, 67, 67)
+    }
+
+    #select-ul>li:nth-child(7):hover {
+        opacity: 1;
+        border-left: 1px solid rgb(207, 207, 207)
+    }
+
+    /*  */
+    #type .top_title .left_title {
+        margin-right: 700px;
+    }
+
+    #type .card .player {
+        width: 200px;
+    }
+
+    #type .card li:nth-child(2) {
+        width: 250px;
+    }
+
+    /*  */
+    #play .card {
+        width: 30%;
+    }
+}
