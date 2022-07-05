@@ -35,7 +35,7 @@
             <option value="ES">ES</option>
           </select></div>
         <div class="reg"><button>REGESTRATION</button></div>
-        <div><a href=""><i class="fa-solid fa-right-to-bracket login"></i></a></div>
+        <div><a href=""><i class="fa-solid fa-right-to-bracket login"><span>YOUR ACCOUNT</span></i></a></div>
       </div>
     </div>
     <input type="checkbox" id="nav" class="hide" checked>
@@ -435,91 +435,6 @@
             </div>
           </div>
         </div>
-        <div id="upcoming" class="block">
-          <div class="side_title">
-            <div class="left_t">UPCOMING MATCH</div>
-            <button class="right_b">calender</button>
-          </div>
-          <div class="card">
-            <span class="time">FOOTBALL - 08:30 PM</span>
-            <div class="title">EUROPA LEAGUE QUALIFYING</div>
-            <ul>
-              <li><img src="" alt="">
-                <h6>ATLETICO</h6> <span>USA</span>
-              </li>
-              <li>
-                <h3></h3><span></span>
-                <hr>
-                <div>vs</div>
-                <div>SHARE
-                  <button>f</button>
-                  <button>b</button>
-                  <button>g</button>
-                  <button>i</button>
-                </div>
-                <button>BUY TICKETS</button>
-              </li>
-              <li><img src="" alt="">
-                <h6>ATLETICO</h6> <span>USA</span>
-              </li>
-            </ul>
-            <div class="gray"></div>
-          </div>
-        </div>
-        <div id="POPULAR_NEWS" class="block">
-          <div class="side_title">
-            <div class="left_t">POPULAR NEWS</div>
-            <button class="right_b">ALL NEWS</button>
-          </div>
-          <div class="card">
-            <img src="" alt="">
-            <div class="title"></div>
-            <div class="info">
-              <div class="type">SPORTS</div><span> APRIL 15, 2020</span>
-            </div>
-            <hr>
-            <div class="detail">Quarterback Tom Brady confirmed Monday that he will be back playing for the New
-              England...</div>
-            <div class="btn"><button>READ MORE</button><button>SHARE</button></div>
-          </div>
-        </div>
-        <div id="LATEST_GAME_RESULTS" class="block">
-          <div class="side_title">
-            <div class="left_t">LATEST GAME RESULTS</div>
-          </div>
-          <div class="card">
-            <ul>
-              <li><img src="" alt="">
-                <h6>ATLETICO</h6> <span>USA</span>
-              </li>
-              <li>
-                <div class="win">WIN</div>
-                2:1
-                <div>HOME</div>
-              </li>
-              <li><img src="" alt="">
-                <h6>ATLETICO</h6> <span>USA</span>
-              </li>
-            </ul>
-            <hr>
-            <div class="info">NEW YORKERS STADIUM APRIL 14, 2020</div>
-          </div>
-        </div>
-        <div id="FOLLOW_US" class="block">
-          <div class="side_title">
-            <div class="left_t">FOLLOW USa
-            </div>
-          </div>
-          <div class="grid">
-            <button class="card fb">
-              <div>
-                <div class="num">50k</div>
-                <div class="like">Like <img src="" alt="">
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
       </div>
     </div>
     <div id="footer">
@@ -647,9 +562,9 @@
       const nowPage = $('input[name=indicator]:checked').val()
 
       if (nowPage == '1') {
-        $("input[name=indicator][value='2']").prop('checked',true)
+        $("input[name=indicator][value='2']").prop('checked', true)
       } else {
-        $("input[name=indicator][value='1']").prop('checked',true)
+        $("input[name=indicator][value='1']").prop('checked', true)
       }
       console.log(nowPage);
     })

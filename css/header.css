@@ -61,8 +61,13 @@ button {
   text-align: center;
 }
 
+#top>label i {
+  font-size: 30px;
+  color: #b7b7b7;
+}
+
 #nav:checked~#nav-bar {
-  transform: translateX(-100%);
+  transform: translateX(-101%);
 }
 
 #user:checked~.more {
@@ -135,12 +140,32 @@ i {
 #top .more .login {
   font-size: 20px;
   color: rgb(100, 176, 0);
+  transition: color 0.3s;
+}
+
+#top .more .login span {
+  margin-left: 10px;
+  font-size: 10px;
+  line-height: 20px;
+  color: #fff;
+  transition: color 0.3s;
+  display: none
+}
+
+#top .more .login:hover {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+#top .more .login:hover span {
+  color: rgb(100, 176, 0);
+  transition: color 0.3s;
 }
 
 /* ----------左方選單區-------------- */
 #nav-bar {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   width: 300px;
   height: 100vh;
   overflow-y: auto;
@@ -459,12 +484,111 @@ i {
 
   /*  */
   #carousel .carousel-item {
-    background-position:66% center ;
+    background-position: 66% center;
   }
+
   #carousel .carousel-caption {
     width: 270px;
   }
 }
 
 
-@media (min-width:1200px) {}
+@media (min-width:1200px) {
+  #top {
+    position: relative;
+    justify-content: center;
+  }
+
+  #top>label {
+    display: none
+  }
+
+  #top .info {
+    width: 300px;
+    margin-left: 30px;
+  }
+
+  #nav-bar {
+    height: auto;
+    display: block;
+    position: relative;
+    top: 0;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  #nav:checked~#nav-bar {
+    transform: none;
+  }
+
+  #top .more {
+    margin-left: 545px;
+    position: initial;
+    width: 400px;
+    background: transparent;
+  }
+
+  #user:checked~.more {
+    transform: none;
+    opacity: 1;
+    pointer-events: initial;
+  }
+
+  #top .more .login span {
+    display: initial
+  }
+
+  /*  */
+  #menu-up {
+    height: 116px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu-up img {
+    width: 25%;
+    margin-right: 300px;
+  }
+
+  #search {
+    margin-left: 450px;
+  }
+
+
+  #menu-down {
+    height: 68px;
+    background: #1a1a1a;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  #menu-down>div {
+    width: auto;
+    height: 100%;
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+
+  #menu-down>div:first-child button {
+    background-color: #1a1a1a;
+    color: #64b000
+  }
+
+  #menu-down>div:hover button {
+    background-color: #1a1a1a;
+    color: #64b000;
+    transition: all 0.2s;
+  }
+
+  #menu-down .share {
+    margin-left: 150px;
+    height: 100%;
+  }
+
+  #menu-down .share>div {
+    line-height: 68px;
+  }
+}
